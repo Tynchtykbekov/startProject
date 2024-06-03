@@ -1,89 +1,24 @@
-//  import React from "react";
-//  import Demo from "./Demo";
-// import Button from "./ui/Button";
-//  // props - eto peredacha danyx js ot roditels kogo kkom ponenta k dochernim kompenenta
-//  function App() {
-//   let user = {
-//     name: 'jon',
-//     age: 20, 
-//     isAdmin: true
-//   }
-//   return (
-//     <div>
-//       Hello
-//       <Demo/>
-//       {/* <Button text={'Delete'}/> */}
-//       <Button>Delete</Button>
-//       <Button>Add</Button>  
-//         <Button>Edit</Button>
-//     </div>
-//   )
-//  }
-//  export default App;
-// import React from "react";
-// import Demo from "./Demo";
-// import Button from "./ui/Button";
-//  function App(){
-//   let user = { 
-// name: "tyy",
-// age: 20,
-// isAdmin: true
-//  }
-//  return(
-//   <div>
-//     HEllo
+ import React from "react";
+ import Comment from "./Comment";
+ const user = {
+  
+  date: new Date(),
+  author: {
+    avatarUrl: "https://www.google.com/imgres?q=kitty&imgurl=https%3A%2F%2Fn1s1.hsmedia.ru%2Fa9%2Fdb%2F9c%2Fa9db9c34517dae28f8157cb6c0637e78%2F600x600_1_aa4808a690ad9caaca0628ca4f830f5d%40696x696_0x5TzYOqtY_1965604772345051232.jpg&imgrefurl=https%3A%2F%2Fthegirl.ru%2Farticles%2Fmrachnaya-hello-kitty-8-stilnykh-veshei-s-kuromi-kotoraya-stala-glavnym-aziatskim-trendom-v-2023%2F&docid=7yTluecyyZ0lMM&tbnid=ro-CIsM08T4fpM&vet=12ahUKEwi-q8fm0byGAxUBJRAIHe_0DuYQM3oECB8QAA..i&w=600&h=600&hcb=2&ved=2ahUKEwi-q8fm0byGAxUBJRAIHe_0DuYQM3oECB8QAA",
+    name: "Kitty",
 
-//     <Demo/>
-//     <Button>Delete</Button>
-//     <Button>Add</Button>
-//     <Button>Edit</Button>
-//   </div>
-//  )
-// }
-//  export default App;
-// import React from "react";
-// import Demo from "./Demo";
-// import Button from "./ui/Button";
-//  function App() {
-//   let user = {
-//     name: 'Theyncs',
-//     age: 29,
-//     isAdmin: true
-//   }
-//   return (
-//     <div>
+  },
+  text: "Learinig React is awesome",
 
-//       Hello
-//       <Demo/>
-//         <Button>delete</Button>
-//         <Button>Add</Button>
-//         <Button>Edit</Button>
 
-//     </div>
-//   )
-//  }
-//  export default App;
- import React, { useState } from "react";
- import Demo from "./Demo";
- import Button from "./ui/Button";
+ }
  function App() {
-  const [toggle, setToggle] = useState(true)
- 
-  const toggleHandler = () => {
-    setToggle(prevState => !prevState)
-  }
-    
- 
-  let nums = [4, 5, 2, 3, 8, 4, 6]
   return (
     <div>
-      {toggle && <p>Hello</p>}
-   <Demo text={"This is demo page"} list={nums} /> 
-   <Button onClick={toggleHandler}>Toggle</Button>
-   <Button>Delete</Button>
-   <Button>Add</Button>
-   <Button>Edit</Button>
-
+<Comment 
+author={user.author}
+ date={user.date}
+  text={user.text}/>
     </div>
   )
  }
